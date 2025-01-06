@@ -29,6 +29,7 @@ const Experience = () => {
                   } // Ensure path starts with "/"
                   alt={card.thumbnail}
                   width={200} // Specify the width
+                  height={200}
                   // You can specify the height or let it be dynamic
                   className="lg:w-32 md:w-20 w-16"
                 />

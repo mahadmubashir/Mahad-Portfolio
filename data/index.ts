@@ -41,7 +41,7 @@ export const projects = [
   {
     id: 1,
     title: "Numbers AI: Multimodal Voice Bot Platform",
-    des: "Built with Python FastAPI and LiveKit Agent, leveraging OpenAI’s real-time API for low-latency responses.. ",
+    des: "Built with Python FastAPI and LiveKit Agent, leveraging OpenAI s real-time API for low-latency responses.. ",
     img: "/Project5.png",
     video: "/Project5.mp4",
     // iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
@@ -108,10 +108,10 @@ export const accomplishments = [
   {
     title: "Leadership in Sports",
     description:
-      "Captained the LUMS Football Team to a historic victory at the UCL Sportsfest'23 Inter-University Tournament.",
+      "Captained the LUMS Football Team to a historic victory at the UCL Sportsfest 23 Inter-University Tournament.",
   },
   {
-    title: "LRP Football League’22",
+    title: "LRP Football League 22",
     description:
       "Crowned Top Scorer and secured the Runners-Up trophy in a competitive league hosted by SA Gardens.",
   },
@@ -121,7 +121,7 @@ export const accomplishments = [
       "Contributed to LUMS Football Team being awarded the prestigious title.",
   },
   {
-    title: "LSE Sports Gala’22",
+    title: "LSE Sports Gala 22",
     description:
       "Part of the winning LUMS Football Team and honoured with the Best Delegation Award.",
   },
@@ -133,7 +133,7 @@ export const accomplishments = [
   {
     title: "Environmental Stewardship",
     description:
-      "Volunteered for Lahore Conservation Society’s plantation drive, planting 1,000 trees across parks and government schools.",
+      "Volunteered for Lahore Conservation Society s plantation drive, planting 1,000 trees across parks and government schools.",
   },
   {
     title: "A-Level Merit Scholarship",
@@ -143,7 +143,7 @@ export const accomplishments = [
   {
     title: "JT Sportsfest Leadership",
     description:
-      "Served as Logistics Head for one of Pakistan’s largest sports Olympiads, coordinating 1,500 participants.",
+      "Served as Logistics Head for one of Pakistan s largest sports Olympiads, coordinating 1,500 participants.",
   },
   {
     title: "Innoventions Security Head",
@@ -158,7 +158,7 @@ export const accomplishments = [
   {
     title: "Academic Distinctions",
     description:
-      "Achieved Internal Distinction in O-Level Chemistry and Straight A’s in Cambridge O-Level exams.",
+      "Achieved Internal Distinction in O-Level Chemistry and Straight A s in Cambridge O-Level exams.",
   },
 ];
 
