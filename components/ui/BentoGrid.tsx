@@ -10,6 +10,7 @@ import animationData from "@/data/confetti.json";
 import MagicButton from "../MagicButton";
 import { FaLocationArrow } from "react-icons/fa6";
 import Link from "next/link";
+import Image from "next/image";
 
 export const BentoGrid = ({
   className,
@@ -81,10 +82,12 @@ export const BentoGridItem = ({
       <div className={`${id === 6 && "flex justify-center"} h-full`}>
         <div className="w-full h-full absolute">
           {img && (
-            <img
-              src={img}
+            <Image
+              src={img.startsWith("/") ? img : `/${img}`}
               alt={img}
-              className={cn(imgClassName, "object-cover object-center ")}
+              width={500} // Set the width
+              height={300} // Set the height
+              className={cn(imgClassName, "object-cover object-center")}
             />
           )}
         </div>
@@ -94,10 +97,9 @@ export const BentoGridItem = ({
           } `}
         >
           {spareImg && (
-            <img
-              src={spareImg}
-              alt={spareImg}
-              //   width={220}
+            <Image
+              src={spareImg.startsWith("/") ? spareImg : `/${spareImg}`} // Ensure spareImg path starts with a slash if it's a relative path
+              alt={spareImg} // Using spareImg as the alt text, which should be the image name or description
               className="object-cover object-center w-full h-full"
             />
           )}

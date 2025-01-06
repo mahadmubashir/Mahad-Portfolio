@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const Approach = () => {
   const images = [
@@ -37,9 +38,12 @@ const Card = ({ src }: { src: string }) => {
       whileTap={{ scale: 0.95 }}
       className="relative overflow-hidden rounded-lg shadow-lg bg-gray-800 group"
     >
-      <img
+      <Image
         src={src}
         alt="Accomplishment"
+        width={400} // Specify width for the image
+        height={300} // Specify height to maintain aspect ratio
+        layout="responsive" // This ensures the aspect ratio is maintained responsively
         className="h-48 md:h-64 lg:h-72 w-full object-cover group-hover:opacity-75 transition duration-300"
       />
     </motion.div>

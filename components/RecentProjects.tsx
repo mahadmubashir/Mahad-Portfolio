@@ -3,6 +3,7 @@ import { FaLocationArrow } from "react-icons/fa6";
 import { projects } from "@/data";
 import { PinContainer } from "./ui/3d-pin";
 import MagicButton from "./MagicButton";
+import Image from "next/image";
 
 const RecentProjects = () => {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
@@ -88,11 +89,14 @@ const RecentProjects = () => {
                     className="relative w-full h-full overflow-hidden rounded-3xl"
                     style={{ backgroundColor: "#13162D" }}
                   >
-                    <img
-                      src={item.img}
-                      alt="cover"
-                      className=" absolute bottom-0 w-full h-full object-cover"
+                    <Image
+                      src={item.img.startsWith("/") ? item.img : `/${item.img}`} // Ensure the path starts with a slash if it's relative
+                      alt="cover" // Alt text for accessibility
+                      width={500} // Replace with the actual width of the image
+                      height={300} // Replace with the actual height of the image
+                      className="absolute bottom-0 w-full h-full object-cover"
                     />
+
                     {hoveredProject === item.id && item.video && (
                       <div className="absolute inset-0 flex items-center justify-center">
                         <video
