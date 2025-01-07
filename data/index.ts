@@ -81,7 +81,7 @@ export const projects = [
   },
   {
     id: 6,
-    title: "A Neural Network's Exploration of Custom Image Data",
+    title: "A Neural Network s Exploration of Custom Image Data",
     des: "Achieved high accuracy on fashion item recognition, reflecting expertise in neural network architecture, hyperparameter tuning, and model evaluation..",
     img: "/Image2.jpg",
 
@@ -91,7 +91,7 @@ export const projects = [
 
 export const accomplishments = [
   {
-    title: "Dean's Honour List",
+    title: "Dean s Honour List",
     description:
       "Recognized for academic excellence in Spring 2020 and Fall 2022.",
   },
@@ -206,7 +206,7 @@ export const workExperience = [
   {
     id: 2,
     title: "Junior Software Developer - Embedded Processing Limited",
-    desc: "Implemented WI-SUN communication protocol integration into Smart Meters' embedded C codebase, conducting rigorous unit testing through hardware flash programming. Enhanced user experience with front-end design using Vue JS and improved backend functionality.",
+    desc: "Implemented WI-SUN communication protocol integration into Smart Meters embedded C codebase, conducting rigorous unit testing through hardware flash programming. Enhanced user experience with front-end design using Vue JS and improved backend functionality.",
     className: "md:col-span-2",
     thumbnail: "/exp2.svg",
   },
