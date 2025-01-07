@@ -14,7 +14,7 @@ const Approach = () => {
     "/AccImage6.jpeg",
     "/AccImage10.jpeg",
     "/AccImage9.jpeg",
-    "/AccImage11.jpeg",
+    "/MahadImage1.jpg",
   ];
 
   return (
