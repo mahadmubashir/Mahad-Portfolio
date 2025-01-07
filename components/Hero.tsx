@@ -49,7 +49,7 @@ const Hero = () => {
           </p> */}
           <TextGenerateEffect
             words="Mahad Mubashir Beg"
-            className="text-center text-[40px] md:text-5xl lg:text-6xl"
+            className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight sm:leading-snug"
           />
 
           {/* <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">

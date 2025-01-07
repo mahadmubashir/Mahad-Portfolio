@@ -35,34 +35,31 @@ const Accomplishments = () => {
       id="accomplishments"
       className="relative py-16 px-6 sm:py-20 sm:px-12 text-white mt-20 rounded-3xl shadow-2xl overflow-hidden"
     >
-      {/* Three.js Canvas Background */}
-      {/* <div className="absolute inset-0 z-0">
-        <Canvas camera={{ position: [0, 0, 6] }}>
-          <ambientLight intensity={0.4} />
-          <directionalLight position={[5, 10, 5]} intensity={1} />
-          <Suspense fallback={null}>
-            <RotatingCube />
-            <OrbitControls enableZoom={false} enablePan={false} />
-          </Suspense>
-        </Canvas>
-      </div> */}
-
       {/* Content */}
-      <div className="relative z-10 text-center">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-8 text-purple">
+      <div className="relative z-10 text-center bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 py-16 px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-12 text-purple-500 tracking-wide">
           Achievements & Activities
         </h2>
-        <div className="max-w-4xl mx-auto grid gap-8 sm:gap-10 grid-cols-1 sm:grid-cols-2">
+        <div className="max-w-6xl mx-auto grid gap-8 md:gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {/* Dynamically Render Accomplishments */}
           {accomplishments.map((item, index) => (
             <div
               key={index}
-              className="space-y-3 sm:space-y-6 text-base sm:text-lg leading-relaxed sm:leading-loose"
+              className="relative group bg-neutral-900 text-white shadow-xl rounded-lg p-6 sm:p-8 overflow-hidden hover:shadow-2xl transition-all duration-300"
             >
-              <li>
-                <span className="font-semibold">{item.title}:</span>{" "}
+              {/* Animated Background Accent */}
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 group-hover:opacity-10 transition duration-500"></div>
+
+              {/* Accomplishment Content */}
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-4">
+                {item.title}
+              </h3>
+              <p className="text-gray-400 text-base sm:text-lg leading-relaxed">
                 {item.description}
-              </li>
+              </p>
+
+              {/* Accent Bar */}
+              <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-blue-500 group-hover:h-2 transition-all duration-300"></div>
             </div>
           ))}
         </div>
