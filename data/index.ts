@@ -91,7 +91,7 @@ export const projects = [
 
 export const accomplishments = [
   {
-    title: "Dean s Honour List",
+    title: "Deans Honour List",
     description:
       "Recognized for academic excellence in Spring 2020 and Fall 2022.",
   },

@@ -36,15 +36,15 @@ const Card = ({ src }: { src: string }) => {
     <motion.div
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      className="relative overflow-hidden rounded-lg shadow-lg bg-gray-800 group"
+      className="relative overflow-hidden rounded-lg shadow-lg group"
+      style={{ aspectRatio: "16/9" }} // Enforce a fixed aspect ratio
     >
       <Image
         src={src}
         alt="Accomplishment"
-        width={400} // Specify width for the image
-        height={300} // Specify height to maintain aspect ratio
-        layout="responsive" // This ensures the aspect ratio is maintained responsively
-        className="h-48 md:h-64 lg:h-72 w-full object-cover group-hover:opacity-75 transition duration-300"
+        layout="fill" // Use fill to ensure the image covers the entire container
+        objectFit="cover" // Maintain the image aspect ratio and cover the container
+        className="group-hover:opacity-75 transition duration-300"
       />
     </motion.div>
   );
