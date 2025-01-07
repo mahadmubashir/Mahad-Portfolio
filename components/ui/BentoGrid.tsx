@@ -143,7 +143,7 @@ export const BentoGridItem = ({
             <Link href="/Degree.jpg" target="_blank" passHref>
               {/* Conditionally render text only for id === 1 */}
               <div className="absolute bottom-4 left-0 text-white p-4 text-3xl font-bold">
-                Bachelors of Computer Science, LUMS
+                Bachelors of Computer Science LUMS
               </div>
             </Link>
           )}
