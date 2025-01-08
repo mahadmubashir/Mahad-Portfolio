@@ -17,7 +17,7 @@ const RecentProjects = () => {
         </h2>
         <div className="flex flex-wrap justify-center gap-6">
           <a
-            href="/UG_Transcript.pdf"
+            href="/Transcript-Mahad.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
