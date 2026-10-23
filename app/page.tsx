@@ -13,6 +13,7 @@ import Approach from "@/components/Approach";
 import Footer from "@/components/Footer";
 import Accomplishments from "@/components/Clients";
 import TechnologiesList from "@/components/TechnologiesList";
+import Certificates from "@/components/Certificates";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
         <RecentProjects />
         <Experience />
         <TechnologiesList />
+        <Certificates />
 
         <Accomplishments />
         <Approach />

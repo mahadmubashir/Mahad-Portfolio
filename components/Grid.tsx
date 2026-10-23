@@ -11,7 +11,6 @@ const Grid = () => {
         {gridItems.map(
           ({
             id,
-            title,
             description,
             className,
             img,
@@ -22,7 +21,6 @@ const Grid = () => {
             <BentoGridItem
               id={id}
               key={id}
-              title={title}
               description={description}
               className={className}
               img={img}

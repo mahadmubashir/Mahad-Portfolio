@@ -6,14 +6,14 @@ import Image from "next/image";
 
 const Approach = () => {
   const images = [
-    "/AccImage1.jpeg",
-    "/AccImage2.jpeg",
-    "/AccImage3.jpeg",
-    "/AccImage8.jpeg",
-    "/AccImage17.jpeg",
-    "/AccImage6.jpeg",
-    "/AccImage10.jpeg",
-    "/AccImage9.jpeg",
+    "/AccImage1.JPEG",
+    "/AccImage2.JPEG",
+    "/AccImage3.JPEG",
+    "/AccImage8.JPEG",
+    "/AccImage17.JPEG",
+    "/AccImage6.JPEG",
+    "/AccImage10.JPEG",
+    "/AccImage9.JPEG",
     "/MahadImage1.jpg",
   ];
 
@@ -37,7 +37,7 @@ const Card = ({ src }: { src: string }) => {
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       className="relative overflow-hidden rounded-lg shadow-lg group"
-      style={{ aspectRatio: "16/9" }} // Enforce a fixed aspect ratio
+      style={{ aspectRatio: "1/1" }} // Square: taller cards that crop less of the mixed portrait/landscape photos
     >
       <Image
         src={src}

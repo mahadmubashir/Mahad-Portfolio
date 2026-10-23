@@ -5,7 +5,6 @@ import { IoCopyOutline } from "react-icons/io5";
 import Lottie from "react-lottie";
 import { cn } from "@/utils/cn";
 import { BackgroundGradientAnimation } from "./GradientBg";
-import { GlobeDemo } from "./GridGlobe";
 import animationData from "@/data/confetti.json";
 import MagicButton from "../MagicButton";
 import { FaLocationArrow } from "react-icons/fa6";
@@ -125,27 +124,50 @@ export const BentoGridItem = ({
             {title}
           </div>
 
-          {id === 2 && <GlobeDemo />}
-
           {id === 3 && (
-            <Link
-              href="/Mahad_Mubashir_Beg_Academic_CV.pdf"
-              target="_blank"
-              passHref
-            >
-              <div className="cursor-pointer text-3xl lg:text-5xl font-bold text-center">
-                View My CV
-              </div>
-            </Link>
+            <div className="flex flex-col gap-5 z-10">
+              <h2 className="text-3xl lg:text-4xl font-bold">
+                About <span className="text-purple">Me</span>
+              </h2>
+              <p className="text-[#C1C2D3] text-sm md:text-base lg:text-lg leading-relaxed">
+                I&apos;m a Python AI Engineer with 4+ years of professional
+                software engineering experience and an MSc in Artificial
+                Intelligence (Distinction) from the University of Surrey. I
+                build and ship LLM-powered products for clients: RAG systems
+                with LangChain, FAISS and OpenAI, real-time voice agents with
+                LiveKit, Twilio, Deepgram and ElevenLabs, and fine-tuned models
+                with LoRA and PyTorch, served through FastAPI on AWS.
+              </p>
+              <p className="text-[#C1C2D3] text-sm md:text-base lg:text-lg leading-relaxed">
+                Based in Guildford, UK, with full UK right to work.
+              </p>
+              <a
+                href="/Mahad Mubashir Beg Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <MagicButton
+                  title="View My CV"
+                  icon={<FaLocationArrow />}
+                  position="right"
+                />
+              </a>
+            </div>
           )}
 
           {id === 1 && (
-            <Link href="/Degree.pdf" target="_blank" passHref>
-              {/* Conditionally render text only for id === 1 */}
-              <div className="absolute bottom-4 left-0 text-white p-4 text-3xl font-bold">
-                Bachelors of Computer Science LUMS
+            <div className="absolute bottom-4 left-0 text-white p-4 font-bold">
+              <div className="text-2xl lg:text-3xl">
+                MSc Artificial Intelligence (Distinction) University of Surrey
               </div>
-            </Link>
+              <Link href="/Degree.pdf" target="_blank" passHref>
+                <div className="mt-2 text-xl lg:text-2xl">
+                  Bachelors of Computer Science
+                  <br></br> 
+                  LUMS
+                </div>
+              </Link>
+            </div>
           )}
 
           {id === 6 && (
@@ -158,7 +180,7 @@ export const BentoGridItem = ({
                 <Lottie options={defaultOptions} height={200} width={400} />
               </div>
               <a
-                href="/Mahad_Mubashir_Beg_Academic_CV.pdf" // Replace with the actual path to your PDF
+                href="/Mahad Mubashir Beg Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
               >

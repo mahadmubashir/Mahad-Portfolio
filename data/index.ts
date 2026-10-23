@@ -17,19 +17,9 @@ export const gridItems = [
     spareImg: "",
   },
   {
-    id: 2,
-    title: "GCSE O/A Levels",
-    description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-2",
-    imgClassName: "",
-    titleClassName: "justify-start",
-    img: "",
-    spareImg: "",
-  },
-  {
     id: 3,
 
-    className: "lg:col-span-2 md:col-span-3 md:row-span-2",
+    className: "lg:col-span-2 md:col-span-6 md:row-span-4",
     imgClassName: "",
     titleClassName: "justify-center",
     img: "",
@@ -42,8 +32,12 @@ type Project = {
   title: string;
   des: string;
   img?: string;
+  // Fit the whole image instead of cropping it to fill the card (e.g. charts)
+  imgContain?: boolean;
   video?: string;
   link?: string;
+  // Defaults to "Check Live Site"
+  linkLabel?: string;
   // Shown as a placeholder when there is no `img`
   category?: string;
 };
@@ -60,25 +54,35 @@ export const projects: Project[] = [
     id: 2,
     title: "Morphological Toxicity Prediction",
     des: "Benchmarked XGBoost and CatBoost across 412 toxicity endpoints, achieving MTT R²=0.820 with 5.2× fewer features via mutual information feature selection.",
-    category: "Computer Vision",
+    img: "/ToxicityProfiling.png",
+    link: "https://canva.link/wsykujvu1bp3ulk",
+    linkLabel: "View Presentation",
   },
   {
     id: 3,
     title: "Dialect-Aware Sarcasm Detection",
     des: "LoRA fine-tuned TinyLlama-1.1B across 3 English varieties, beating pooled RoBERTa (Macro-F1 0.6275 vs 0.6075) with a 550× smaller footprint.",
-    category: "Natural Language Processing",
+    img: "/SarcasmHeatmap.png",
+    imgContain: true,
+    link: "/Sarcasm_Detection_Report.pdf",
+    linkLabel: "View Report",
   },
   {
     id: 4,
     title: "Diabetic Retinopathy Grading with Vision Transformers",
     des: "Fine-tuned ViT-B/16 on 35K retinal images across 7 ablation experiments, with Grad-CAM, Attention Rollout and LIME explainability.",
-    category: "Applied Machine Learning",
+    img: "/DRGrading.png",
+    link: "https://canva.link/ya9qzw5y2tgzbm4",
+    linkLabel: "View Presentation",
   },
   {
     id: 5,
     title: "PM2.5 Air Quality Forecasting for Lahore",
     des: "End-to-end LSTM, CNN and Transformer forecasting pipeline with SHAP/LIME analysis and TFLite quantisation achieving 85-91% compression for edge devices.",
-    category: "AI & Sustainability",
+    img: "/PM25Residuals.jpg",
+    imgContain: true,
+    link: "/PM25_Forecasting_Report.pdf",
+    linkLabel: "View Report",
   },
   {
     id: 6,
@@ -86,12 +90,7 @@ export const projects: Project[] = [
     des: "Users create voice bots from documents or website URLs, backed by FAISS vector indexes, FastAPI, LiveKit Agent, OpenAI's low-latency API and Twilio.",
     img: "/Project5.png",
     video: "/Project5.mp4",
-  },
-  {
-    id: 7,
-    title: "AI-Powered Restaurant Reservation Voice Bot",
-    des: "Voice bot for reservations and order-taking using Deepgram speech-to-text, ElevenLabs text-to-speech and OpenAI's real-time API.",
-    category: "Voice AI",
+    link: "https://number5.ai/",
   },
   {
     id: 8,
@@ -102,18 +101,38 @@ export const projects: Project[] = [
   },
   {
     id: 9,
-    title: "Video2Music: AI-Driven Video to Music Conversion",
-    des: "Full-stack React and Python app that transcribes video audio with Whisper, analyses mood with fine-tuned GPT-3.5 and generates music with Meta's MusicGen.",
-    category: "Generative AI",
+    title: "Somos: Ethereum Crypto Wallet application",
+    des: "Developed a subscription-based crypto wallet application utilizing Web3.js for Solana blockchain interaction",
+    img: "/Image1Project.png",
+    video: "/Video2.mp4",
+    link: "https://www.somosblockchain.com",
   },
   {
     id: 10,
-    title: "Unveiling Road Accident Patterns and Trends",
-    des: "Applied EDA, clustering and frequent pattern mining to identify accident hotspots and develop data-driven road safety recommendations.",
-    category: "Data Mining",
+    title: "Inflo: One click Information Sharing Mobile App",
+    des: "Designed a scalable database schema with Prisma ORM for seamless migrations and optimized query performance.",
+    img: "/Image2.png",
+    video: "/Video1.mp4",
   },
   {
     id: 11,
+    title: "Video2Music: AI-Driven Video to Music Conversion",
+    des: "Full-stack React and Python app that transcribes video audio with Whisper, analyses mood with fine-tuned GPT-3.5 and generates music with Meta's MusicGen.",
+    video: "/vid2music.mp4",
+    link: "https://github.com/mahadmubashir/Video2Music",
+    linkLabel: "View Code",
+  },
+  {
+    id: 12,
+    title: "Unveiling Road Accident Patterns and Trends",
+    des: "Applied EDA, clustering and frequent pattern mining to identify accident hotspots and develop data-driven road safety recommendations.",
+    img: "/RoadAccidentClusters.png",
+    imgContain: true,
+    link: "https://colab.research.google.com/drive/1OKlsSmN0gv2fLcXterTPWWA45IDHXI8m?usp=sharing",
+    linkLabel: "View Notebook",
+  },
+  {
+    id: 13,
     title: "A Neural Network's Exploration of Custom Image Data",
     des: "Achieved high accuracy on fashion item recognition, reflecting expertise in neural network architecture, hyperparameter tuning, and model evaluation.",
     img: "/Image2.jpg",
@@ -121,6 +140,11 @@ export const projects: Project[] = [
 ];
 
 export const accomplishments = [
+  {
+    title: "Graduated with Distinction",
+    description:
+      "Awarded an MSc in Artificial Intelligence with Distinction from the University of Surrey.",
+  },
   {
     title: "Deans Honour List",
     description:
@@ -229,15 +253,15 @@ export const companies = [
 export const workExperience = [
   {
     id: 1,
-    title: "Full Stack Engineer - Senarios",
-    desc: "Developing AI-powered platforms and Web3 apps focusing on business automation and customer engagement. Proficient in backend development using FastAPI and Node.js, API integration, and AWS-based deployments.",
+    title: "Senior Software Engineer (ML & Full Stack) - Senarios",
+    desc: "Built LLM-powered products for clients, including a RAG voice bot platform (FAISS, FastAPI, LiveKit, OpenAI, Twilio) and a ride-booking chatbot with Groq LLaMA NER and fine-tuned GPT-4o. Led client requirement meetings, ran SCRUM, and deployed backends on AWS with CI/CD.",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
   {
     id: 2,
-    title: "Junior Software Developer - Embedded Processing Limited",
-    desc: "Implemented WI-SUN communication protocol integration into Smart Meters embedded C codebase, conducting rigorous unit testing through hardware flash programming. Enhanced user experience with front-end design using Vue JS and improved backend functionality.",
+    title: "Software Engineer - Embedded Processing Limited",
+    desc: "Implemented WI-SUN communication protocol integration into Smart Meters embedded C codebase, conducting rigorous unit testing through hardware flash programming. Automated testing with VectorCAST to validate code integrity and reliability, and built front-end features in Vue JS.",
     className: "md:col-span-2",
     thumbnail: "/exp2.svg",
   },
