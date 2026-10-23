@@ -37,55 +37,86 @@ export const gridItems = [
   },
 ];
 
-export const projects = [
+type Project = {
+  id: number;
+  title: string;
+  des: string;
+  img?: string;
+  video?: string;
+  link?: string;
+  // Shown as a placeholder when there is no `img`
+  category?: string;
+};
+
+export const projects: Project[] = [
   {
     id: 1,
-    title: "Numbers AI: Multimodal Voice Bot Platform",
-    des: "Built with Python FastAPI and LiveKit Agent, leveraging OpenAI s real-time API for low-latency responses.. ",
-    img: "/Project5.png",
-    video: "/Project5.mp4",
-    // iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
+    title: "Poocho AI: Agentic AI Platform",
+    des: "Built the backend for a unified AI-powered call centre platform with Node.js, PostgreSQL and Redis, plus IVR flows on FreeSWITCH and FusionPBX with RabbitMQ event processing.",
+    img: "/Poocho.png",
+    link: "https://poochoai.com/",
   },
   {
     id: 2,
-    title: "IT Curves: Accessible Ride-Booking Chatbot ",
-    des: "Implemented a real-time Named Entity Recognition model using Groq LLaMA 3.1-70B-Versatile for dynamic address suggestions..",
-    img: "/chatImage.png",
-    video: "/VideoImage.mp4",
-    // iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
+    title: "Morphological Toxicity Prediction",
+    des: "Benchmarked XGBoost and CatBoost across 412 toxicity endpoints, achieving MTT R²=0.820 with 5.2× fewer features via mutual information feature selection.",
+    category: "Computer Vision",
   },
   {
     id: 3,
-    title: "Somos: Ethereum Crypto Wallet application",
-    des: "Developed a subscription-based crypto wallet application utilzing Web3.js for Solana blockchain interaction",
-    img: "Image1Project.png",
-    video: "/Video2.mp4",
-    // iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "https://www.somosblockchain.com",
+    title: "Dialect-Aware Sarcasm Detection",
+    des: "LoRA fine-tuned TinyLlama-1.1B across 3 English varieties, beating pooled RoBERTa (Macro-F1 0.6275 vs 0.6075) with a 550× smaller footprint.",
+    category: "Natural Language Processing",
   },
   {
     id: 4,
-    title: "Inflo: One click Information Sharing Mobile App",
-    des: "Designed a scalable database schema with Prisma ORM for seamless migrations and optimized query performance.",
-    img: "/Image2.png",
-    video: "/Video1.mp4",
-    // iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
+    title: "Diabetic Retinopathy Grading with Vision Transformers",
+    des: "Fine-tuned ViT-B/16 on 35K retinal images across 7 ablation experiments, with Grad-CAM, Attention Rollout and LIME explainability.",
+    category: "Applied Machine Learning",
   },
   {
     id: 5,
-    title: "Baichday: Web based Bidding Platform using MERN Stack",
-    des: "Developed a MERN stack web app with a user-friendly UI designed in Figma and ensured functionality through Cypress automated testing, enabling secure bidding and efficient item listing.",
-    img: "/Image3.png",
-    video: "/Video3.mp4",
-    // iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
+    title: "PM2.5 Air Quality Forecasting for Lahore",
+    des: "End-to-end LSTM, CNN and Transformer forecasting pipeline with SHAP/LIME analysis and TFLite quantisation achieving 85-91% compression for edge devices.",
+    category: "AI & Sustainability",
   },
   {
     id: 6,
-    title: "A Neural Network s Exploration of Custom Image Data",
-    des: "Achieved high accuracy on fashion item recognition, reflecting expertise in neural network architecture, hyperparameter tuning, and model evaluation..",
+    title: "Numbers AI: RAG based Multimodal Voice Bot Platform",
+    des: "Users create voice bots from documents or website URLs, backed by FAISS vector indexes, FastAPI, LiveKit Agent, OpenAI's low-latency API and Twilio.",
+    img: "/Project5.png",
+    video: "/Project5.mp4",
+  },
+  {
+    id: 7,
+    title: "AI-Powered Restaurant Reservation Voice Bot",
+    des: "Voice bot for reservations and order-taking using Deepgram speech-to-text, ElevenLabs text-to-speech and OpenAI's real-time API.",
+    category: "Voice AI",
+  },
+  {
+    id: 8,
+    title: "IT Curves: Accessible Ride-Booking Chatbot",
+    des: "Implemented a real-time Named Entity Recognition model using Groq LLaMA 3.1-70B-Versatile for dynamic address suggestions, with fine-tuned GPT-4o via LangChain.",
+    img: "/ChatImage.png",
+    video: "/VideoImage.mp4",
+  },
+  {
+    id: 9,
+    title: "Video2Music: AI-Driven Video to Music Conversion",
+    des: "Full-stack React and Python app that transcribes video audio with Whisper, analyses mood with fine-tuned GPT-3.5 and generates music with Meta's MusicGen.",
+    category: "Generative AI",
+  },
+  {
+    id: 10,
+    title: "Unveiling Road Accident Patterns and Trends",
+    des: "Applied EDA, clustering and frequent pattern mining to identify accident hotspots and develop data-driven road safety recommendations.",
+    category: "Data Mining",
+  },
+  {
+    id: 11,
+    title: "A Neural Network's Exploration of Custom Image Data",
+    des: "Achieved high accuracy on fashion item recognition, reflecting expertise in neural network architecture, hyperparameter tuning, and model evaluation.",
     img: "/Image2.jpg",
-
-    // iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
   },
 ];
 

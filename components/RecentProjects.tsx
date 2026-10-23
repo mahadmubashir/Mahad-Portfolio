@@ -89,13 +89,21 @@ const RecentProjects = () => {
                     className="relative w-full h-full overflow-hidden rounded-3xl"
                     style={{ backgroundColor: "#13162D" }}
                   >
-                    <Image
-                      src={item.img.startsWith("/") ? item.img : `/${item.img}`} // Ensure the path starts with a slash if it's relative
-                      alt="cover" // Alt text for accessibility
-                      width={500} // Replace with the actual width of the image
-                      height={300} // Replace with the actual height of the image
-                      className="absolute bottom-0 w-full h-full object-cover"
-                    />
+                    {item.img ? (
+                      <Image
+                        src={item.img.startsWith("/") ? item.img : `/${item.img}`} // Ensure the path starts with a slash if it's relative
+                        alt="cover" // Alt text for accessibility
+                        width={500} // Replace with the actual width of the image
+                        height={300} // Replace with the actual height of the image
+                        className="absolute bottom-0 w-full h-full object-cover"
+                      />
+                    ) : (
+                      <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-[#13162D] to-[#2a1f4d] p-6">
+                        <span className="text-purple text-center font-bold lg:text-3xl text-xl">
+                          {item.category}
+                        </span>
+                      </div>
+                    )}
 
                     {hoveredProject === item.id && item.video && (
                       <div className="absolute inset-0 flex items-center justify-center">
